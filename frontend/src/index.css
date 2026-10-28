@@ -1,0 +1,209 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fc;
+}
+
+.app-layout {
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #172b4d;
+  color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 25px 16px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.brand {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.sidebar-caption {
+  font-size: 11px;
+  color: #afc4e5;
+  letter-spacing: 1px;
+}
+
+.menu-heading {
+  font-size: 11px;
+  color: #afc4e5;
+  margin: 35px 12px 12px;
+}
+
+.menu-item {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #dce5f3;
+  text-align: left;
+  padding: 13px 12px;
+  border-radius: 8px;
+  margin-bottom: 7px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background: #2d5b9e;
+  color: white;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  font-size: 12px;
+  color: #dce5f3;
+}
+
+.main-content {
+  margin-left: 250px;
+  min-height: 100vh;
+}
+
+.topbar {
+  background: white;
+  padding: 18px 30px;
+  border-bottom: 1px solid #e5eaf2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-badge {
+  background: #eaf1ff;
+  color: #2458a6;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.content-area {
+  padding: 30px;
+}
+
+.welcome-banner {
+  padding: 35px;
+  color: white;
+  border-radius: 15px;
+  background: linear-gradient(120deg, #2458a6, #477fe0);
+}
+
+.welcome-banner p {
+  color: #e6edff;
+}
+
+.stat-card,
+.search-panel,
+.form-panel,
+.bus-card,
+.reservation-card {
+  background: white;
+  border: 1px solid #e7ecf4;
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.stat-card p {
+  color: #65758b;
+  margin-bottom: 8px;
+}
+
+.stat-card h3 {
+  color: #2458a6;
+  font-weight: bold;
+}
+
+.quick-card {
+  background: white;
+  border: 1px solid #e7ecf4;
+  border-radius: 12px;
+  padding: 22px;
+  width: 100%;
+  min-height: 150px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quick-card:hover {
+  border-color: #2458a6;
+  box-shadow: 0 4px 15px #172b4d12;
+}
+
+.quick-icon {
+  font-size: 25px;
+}
+
+.route-text {
+  color: #2458a6;
+  margin-bottom: 15px;
+}
+
+.bus-card:hover,
+.reservation-card:hover {
+  box-shadow: 0 4px 15px #172b4d12;
+}
+
+.form-panel {
+  max-width: 700px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    bottom: auto;
+    padding: 15px;
+  }
+
+  .menu-heading,
+  .sidebar-caption,
+  .sidebar-bottom {
+    display: none;
+  }
+
+  .sidebar {
+    display: block;
+  }
+
+  .menu-item {
+    width: auto;
+    display: inline-flex;
+    padding: 9px;
+    margin: 5px 2px;
+    font-size: 12px;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .topbar {
+    padding: 15px;
+  }
+
+  .content-area {
+    padding: 15px;
+  }
+
+  .welcome-banner {
+    padding: 24px;
+  }
+}
